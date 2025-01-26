@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="p-6 bg-gray-100 dark:bg-gray-800 h-screen w-screen flex items-center justify-center">
+      <div class="w-full max-w-md bg-white p-3 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Upload File</h2>
+        
+        <!-- Form Start -->
+        <form action="/upload_file" method="post" enctype="multipart/form-data">
+          <div class="mb-4">
+            <label for="file" class="block text-sm font-medium text-gray-700">Choose File</label>
+            <input
+              type="file"
+              id="file"
+              name="file"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+              required
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="description" class="block text-sm font-medium text-gray-700">Description (Optional)</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            ></textarea>
+          </div>
+
+          <div class="flex justify-center">
+            <button
+              type="submit"
+              class="w-full bg-blue-700 hover:bg-blue-800 text-white font-medium py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+        <!-- Form End -->
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </body>
+</html>
